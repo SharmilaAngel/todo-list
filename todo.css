@@ -1,0 +1,146 @@
+:root {
+  --bg: #f4f7fa;
+  --text: #333;
+  --card: white;
+  --accent: #007bff;
+  --completed: green;
+  --pending: red;
+}
+
+body.dark {
+  --bg: #1e1e2f;
+  --text: #f0f0f0;
+  --card: #2c2c3e;
+  --accent: #4dabf7;
+  --completed: #00e676;
+  --pending: #ff1744;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+form button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  opacity: 0.9;
+}
+
+#theme-toggle {
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-section {
+  margin-top: 30px;
+}
+
+.task-section h3 {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  color: var(--text);
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+body.dark .task {
+  background: #3a3a50;
+}
+
+.task span {
+  flex-grow: 1;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: var(--completed);
+}
+
+.status {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.task button {
+  margin-left: 10px;
+  border: none;
+  background: var(--pending);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task button:hover {
+  opacity: 0.8;
+}
+
+.filters {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filters button {
+  padding: 6px 12px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  opacity: 0.9;
+}
+

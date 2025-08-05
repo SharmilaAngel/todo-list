@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List with Calendar</title>
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>📝 Daily To-Do List</h1>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </div>
+
+    <div>
+      <label>Select Month:
+        <input type="month" id="selectedMonth" onchange="renderTasks()" />
+      </label>
+    </div>
+
+
+    <div class="filters">
+      <button onclick="filterTasks('all')">📋 All</button>
+      <button onclick="filterTasks('completed')">✅ Completed</button>
+      <button onclick="filterTasks('pending')">❌ Not Completed</button>
+    </div>
+
+    
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Enter task" required />
+      <input type="date" id="task-date" required />
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="tasks-by-date"></div>
+  </div>
+
+  <script src="todo.js"></script>
+</body>
+</html>
